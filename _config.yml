@@ -1,251 +1,98 @@
-<!DOCTYPE html>
-<html lang="zh-CN">
+# Basic Site Settings
+locale: "en-US"
+title: "一十二叶&叶溪的个人主页"  # 标题
+title_separator: "-"
+name: "一十二叶"  # 名字
+description: "在中国的一个普普通通的福瑞控和我的世界玩家罢了"  # 个人介绍
+url: "https://academicpages.github.io"  # 网站基本URL
+baseurl: ""  # 网站子路径，空字符串表示根目录
+repository: "academicpages/academicpages.github.io"  # 仓库地址
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="一十二叶的个人主页。包含Furry文化、Minecraft 游戏和个人创作。">
-    <title>一十二叶的个人主页</title>
+# Site Author - 下面控制在侧边栏显示的作者内容
+author:
+  avatar: "https://s21.ax1x.com/2025/01/11/pEPKtF1.jpg"  # 头像链接
+  name: "一十二叶"
+  pronouns: ""  # 可选，如：she/her
+  bio: "没什么的"  # 个人简介
+  location: "Earth"  # 住址
+  employer: "Red Brick University"  # 所在学校
+  email: "none@example.org"  # 邮箱
 
-    <!-- 引入Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+# Repositories and social links
+author_social:
+  github: "furrykongche"  # GitHub用户名
+  bilibili: "https://space.bilibili.com/580399817?spm_id_from=333.1007.0.0"  # Bilibili个人空间
 
-    <!-- 页面样式 -->
-    <style>
-        /* 基础样式 */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+# Publication Category
+publication_category:
+  books:
+    title: 'Books'
+  manuscripts:
+    title: 'Journal Articles'
+  conferences:
+    title: 'Conference Papers'
 
-        body {
-            font-family: 'Roboto', sans-serif;
-            background-color: #f0f0f0;
-            color: #333;
-        }
+# Site Settings
+teaser: ""  # fallback teaser image
+breadcrumbs: false  # 是否显示面包屑
+words_per_minute: 160
+future: true
+read_more: "disabled"  # 是否启用 "Read more" 功能
+comments:
+  provider: false  # 关闭评论功能
 
-        h2 {
-            margin-bottom: 20px;
-            color: #333;
-        }
+# SEO Related
+google_site_verification: ""
+bing_site_verification: ""
+alexa_site_verification: ""
+yandex_site_verification: ""
 
-        /* 头部导航 */
-        header {
-            background-color: #4CAF50;
-            padding: 10px 0;
-            color: white;
-            text-align: center;
-        }
+# Social Sharing
+twitter:
+  username: "furrykongche"  # Twitter用户名
+facebook:
+  username: "furrykongche"  # Facebook用户名
+og_image: ""  # Open Graph默认图像
 
-        header nav ul {
-            list-style: none;
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-        }
+# Analytics
+analytics:
+  provider: "false"  # 不启用Google Analytics
 
-        header nav ul li {
-            display: inline;
-        }
+# Markdown Processing
+markdown: kramdown
+highlighter: rouge
+lsi: false
+excerpt_separator: "\n\n"
+incremental: false
 
-        header nav ul li a {
-            color: white;
-            text-decoration: none;
-            font-size: 18px;
-        }
+# Plugins
+plugins:
+  - jekyll-feed
+  - jekyll-gist
+  - jekyll-paginate
+  - jekyll-sitemap
+  - jekyll-redirect-from
+  - jemoji
 
-        header nav ul li a:hover {
-            text-decoration: underline;
-        }
+# Archives
+category_archive:
+  type: liquid
+  path: /categories/
+tag_archive:
+  type: liquid
+  path: /tags/
 
-        /* 主页大背景 */
-        #hero {
-            background-image: url('https://via.placeholder.com/1200x600');
-            background-size: cover;
-            height: 400px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            color: white;
-            text-align: center;
-        }
+# HTML Compression
+compress_html:
+  clippings: all
+  ignore:
+    envs: development
 
-        #hero .cta-btn {
-            background-color: #ff6347;
-            color: white;
-            padding: 10px 20px;
-            border: none;
-            cursor: pointer;
-            font-size: 16px;
-        }
+# Sass/SCSS settings
+sass:
+  sass_dir: _sass
+  style: compressed  # 使用压缩模式
 
-        #hero .cta-btn:hover {
-            background-color: #ff4500;
-        }
-
-        /* 各个部分的样式 */
-        .section {
-            padding: 40px 20px;
-            text-align: center;
-        }
-
-        #about .avatar {
-            border-radius: 50%;
-            width: 150px;
-            height: 150px;
-            margin-top: 20px;
-        }
-
-        /* 博客 */
-        .blog-posts {
-            display: flex;
-            justify-content: space-around;
-            gap: 20px;
-            margin-top: 20px;
-        }
-
-        .blog-post {
-            background-color: white;
-            padding: 20px;
-            width: 45%;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        }
-
-        .blog-post .read-more {
-            display: inline-block;
-            margin-top: 10px;
-            text-decoration: none;
-            color: #4CAF50;
-        }
-
-        /* 艺术作品 */
-        .gallery {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            margin-top: 20px;
-        }
-
-        .gallery-item img {
-            width: 200px;
-            height: 200px;
-            border-radius: 8px;
-        }
-
-        /* 联系我 */
-        form {
-            max-width: 600px;
-            margin: 0 auto;
-            text-align: left;
-        }
-
-        form label {
-            font-size: 16px;
-            margin-bottom: 8px;
-            display: block;
-        }
-
-        form input,
-        form textarea {
-            width: 100%;
-            padding: 10px;
-            margin-bottom: 20px;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-        }
-
-        form button {
-            background-color: #4CAF50;
-            color: white;
-            padding: 12px 24px;
-            border: none;
-            cursor: pointer;
-            font-size: 16px;
-        }
-
-        form button:hover {
-            background-color: #45a049;
-        }
-
-        /* 底部 */
-        footer {
-            background-color: #333;
-            color: white;
-            text-align: center;
-            padding: 20px 0;
-        }
-    </style>
-</head>
-
-<body>
-    <!-- 网站导航栏 -->
-    <header>
-        <div class="logo">
-            <h1>一十二叶的个人主页</h1>
-        </div>
-        <nav>
-            <ul>
-                <li><a href="#about">关于我</a></li>
-                <li><a href="#blog">博客</a></li>
-                <li><a href="#artwork">艺术作品</a></li>
-                <li><a href="#contact">联系我</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <!-- 主页大背景 -->
-    <section id="hero">
-        <div class="hero-content">
-            <h2>欢迎来到我的世界！</h2>
-            <p>探索Furry文化与Minecraft的乐趣</p>
-            <button class="cta-btn">开始冒险</button>
-        </div>
-    </section>
-
-    <!-- 关于我部分 -->
-    <section id="about" class="section">
-        <h2>关于我</h2>
-        <p>你好，我是一十二叶，一个普通的福瑞控和Minecraft玩家。欢迎来到我的个人主页！这里我会分享一些我的创作、游戏经验和生活点滴。</p>
-        <img src="https://s21.ax1x.com/2025/01/11/pEPKtF1.jpg" alt="一十二叶的头像" class="avatar">
-    </section>
-
-    <!-- 博客部分 -->
-    <section id="blog" class="section">
-        <h2>我的博客</h2>
-        <div class="blog-posts">
-            <div class="blog-post">
-                <h3>如何成为一个福瑞控</h3>
-                <p>福瑞控文化是一个非常丰富和有趣的文化，里面有各种不同的创作和故事。如果你想了解更多，点击下面的链接！</p>
-                <a href="#" class="read-more">阅读更多</a>
-            </div>
-            <div class="blog-post">
-                <h3>我的Minecraft冒险之旅</h3>
-                <p>在Minecraft的世界里，每一天都是新的冒险。加入我，一起探索最疯狂的建筑与挑战！</p>
-                <a href="#" class="read-more">阅读更多</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- 艺术作品展示 -->
-    <section id="artwork" class="section">
-        <h2>我的艺术作品</h2>
-        <div class="gallery">
-            <div class="gallery-item">
-                <img src="https://via.placeholder.com/200" alt="艺术作品1">
-            </div>
-            <div class="gallery-item">
-                <img src="https://via.placeholder.com/200" alt="艺术作品2">
-            </div>
-            <div class="gallery-item">
-                <img src="https://via.placeholder.com/200" alt="艺术作品3">
-            </div>
-        </div>
-    </section>
-
-    <!-- 联系我部分 -->
-    <section id="contact" class="section">
-        <h2>联系我</h2>
-        <form action="#" method="POST" id="contact-form">
-            <label for="name">姓名</
+# Outputting
+permalink: /:categories/:title/
+timezone: Etc/UTC
