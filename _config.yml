@@ -1,251 +1,108 @@
-# Basic Site Settings
-locale: "en-US" # 网站的语言
-title: "一十二叶的个人主页 | 福瑞控与我的世界玩家" # 网站标题
-title_separator: "-" # 标题分隔符
-name: &name "一十二叶" # 站点管理员名称
-description: &description "一十二叶，福瑞控与我的世界玩家，分享我的兴趣与创作。" # 网站描述
-url: https://furrykongche.github.io # 网站URL
-baseurl: "" # 子路径 (如果有的话)
-repository: "academicpages/academicpages.github.io" # GitHub 仓库地址
+<!DOCTYPE html>
+<html lang="zh-CN">
 
-# Author Settings
-author:
-  avatar: "https://s21.ax1x.com/2025/01/11/pEPKtF1.jpg" # 头像链接
-  name: "一十二叶" # 作者名称
-  pronouns: "" # 代词（如果有）
-  bio: "没有什么特别的，喜欢福瑞控与我的世界。" # 作者简介
-  location: "中国" # 位置
-  employer: "Red Brick University" # 雇主或学校
-  email: "none@example.org" # 电子邮件地址
-  # 学术网站
-  arxiv: "" # arXiv 链接
-  googlescholar: "" # Google Scholar 链接
-  researchgate: "" # ResearchGate 链接
-  github: "furrykongche" # GitHub 用户名
-  linkedin: "your_linkedin_profile_url" # LinkedIn 链接
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="一十二叶的个人主页。包含Furry文化、Minecraft 游戏和个人创作。">
+    <title>一十二叶的个人主页</title>
 
-# Social Media
-social:
-  twitter: "furrykongche" # Twitter 用户名
-  github: "furrykongche" # GitHub 用户名
-  linkedin: "your_linkedin_profile_url" # LinkedIn 链接
-  facebook: "" # Facebook 链接
-  instagram: "" # Instagram 链接
-  weibo: "your_weibo_profile_url" # 微博链接
-  youtube: "" # YouTube 链接
+    <!-- 引入Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 
-# Publication Category
-publication_category:
-  books:
-    title: 'Books'
-  manuscripts:
-    title: 'Journal Articles'
-  conferences:
-    title: 'Conference Papers'
+    <!-- 页面样式 -->
+    <link rel="stylesheet" href="styles.css">
+</head>
 
-# Site Settings
-teaser: "" # 默认的封面图片
-breadcrumbs: false # 是否启用面包屑导航
-words_per_minute: 160 # 文章阅读速度
-future: true # 是否显示未来的文章
-read_more: "disabled" # 启用 "Read More" 链接
-comments:
-  provider: "disqus" # 评论提供商 (如: disqus, facebook, staticman等)
-  disqus:
-    shortname: "your_disqus_shortname" # Disqus 短名称
-staticman:
-  allowedFields: ['name', 'email', 'url', 'message'] # Staticman 评论字段设置
-  branch: "gh-pages" # 评论的 Git 分支
-  commitMessage: "New comment." # 提交信息
-  filename: comment-{@timestamp} # 评论文件名
-  format: "yml" # 文件格式
-  moderation: true # 是否启用评论审核
-  path: "_data/comments/{options.slug}" # 评论存储路径
-  requiredFields: ['name', 'email', 'message'] # 必填字段
-  generatedFields:
-    date:
-      type: "date"
-      options:
-        format: "iso8601" # 日期格式
+<body>
+    <!-- 网站导航栏 -->
+    <header>
+        <div class="logo">
+            <h1>一十二叶的个人主页</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#about">关于我</a></li>
+                <li><a href="#blog">博客</a></li>
+                <li><a href="#artwork">艺术作品</a></li>
+                <li><a href="#contact">联系我</a></li>
+            </ul>
+        </nav>
+    </header>
 
-# SEO Related
-google_site_verification: "your_google_verification_code" # Google 验证码
-bing_site_verification: "your_bing_verification_code" # Bing 验证码
-alexa_site_verification: "" # Alexa 验证码
-yandex_site_verification: "" # Yandex 验证码
+    <!-- 主页大背景 -->
+    <section id="hero">
+        <div class="hero-content">
+            <h2>欢迎来到我的世界！</h2>
+            <p>探索Furry文化与Minecraft的乐趣</p>
+            <button class="cta-btn">开始冒险</button>
+        </div>
+    </section>
 
-# Social Sharing (Open Graph/Twitter)
-og_image: "" # 默认的社交分享图片
-twitter:
-  username: "furrykongche" # Twitter 用户名
-facebook:
-  username: "furrykongche" # Facebook 用户名
+    <!-- 关于我部分 -->
+    <section id="about" class="section">
+        <h2>关于我</h2>
+        <p>你好，我是一十二叶，一个普通的福瑞控和Minecraft玩家。欢迎来到我的个人主页！这里我会分享一些我的创作、游戏经验和生活点滴。</p>
+        <img src="https://s21.ax1x.com/2025/01/11/pEPKtF1.jpg" alt="一十二叶的头像" class="avatar">
+    </section>
 
-# Analytics
-analytics:
-  provider: "google" # Google Analytics
-  google:
-    tracking_id: "UA-XXXXXX-X" # Google Analytics 追踪 ID
+    <!-- 博客部分 -->
+    <section id="blog" class="section">
+        <h2>我的博客</h2>
+        <div class="blog-posts">
+            <div class="blog-post">
+                <h3>如何成为一个福瑞控</h3>
+                <p>福瑞控文化是一个非常丰富和有趣的文化，里面有各种不同的创作和故事。如果你想了解更多，点击下面的链接！</p>
+                <a href="#" class="read-more">阅读更多</a>
+            </div>
+            <div class="blog-post">
+                <h3>我的Minecraft冒险之旅</h3>
+                <p>在Minecraft的世界里，每一天都是新的冒险。加入我，一起探索最疯狂的建筑与挑战！</p>
+                <a href="#" class="read-more">阅读更多</a>
+            </div>
+        </div>
+    </section>
 
-# Reading Files
-include:
-  - .htaccess
-  - _pages
-  - files
-exclude:
-  - "*.sublime-project"
-  - "*.sublime-workspace"
-  - .asset-cache
-  - .bundle
-  - .github
-  - .jekyll-assets-cache
-  - .sass-cache
-  - assets/js/_main.js
-  - assets/js/plugins
-  - assets/js/vendor
-  - CHANGELOG
-  - Capfile
-  - config
-  - Dockerfile
-  - Gemfile
-  - Gruntfile.js
-  - gulpfile.js
-  - LICENSE
-  - local
-  - log
-  - node_modules
-  - package.json*
-  - Rakefile
-  - README
-  - tmp
-  - vendor
-keep_files:
-  - .git
-  - .svn
-encoding: "utf-8" # 编码格式
-markdown_ext: "markdown,mkdown,mkdn,mkd,md" # Markdown 扩展名
+    <!-- 艺术作品展示 -->
+    <section id="artwork" class="section">
+        <h2>我的艺术作品</h2>
+        <div class="gallery">
+            <div class="gallery-item">
+                <img src="https://via.placeholder.com/200" alt="艺术作品1">
+            </div>
+            <div class="gallery-item">
+                <img src="https://via.placeholder.com/200" alt="艺术作品2">
+            </div>
+            <div class="gallery-item">
+                <img src="https://via.placeholder.com/200" alt="艺术作品3">
+            </div>
+        </div>
+    </section>
 
-# Markdown Processing
-kramdown:
-  input: GFM # GitHub Flavored Markdown
-  hard_wrap: false
-  auto_ids: true
-  footnote_nr: 1
-  entity_output: as_char
-  toc_levels: 1..6 # 目录层级
-  smart_quotes: lsquo,rsquo,ldquo,rdquo # 智能引号
-  enable_coderay: false # 关闭代码高亮
+    <!-- 联系我部分 -->
+    <section id="contact" class="section">
+        <h2>联系我</h2>
+        <form action="#" method="POST" id="contact-form">
+            <label for="name">姓名</label>
+            <input type="text" id="name" name="name" required>
 
-# Collections
-collections:
-  teaching:
-    output: true
-    permalink: /:collection/:path/
-  publications:
-    output: true
-    permalink: /:collection/:path/
-  portfolio:
-    output: true
-    permalink: /:collection/:path/
-  talks:
-    output: true
-    permalink: /:collection/:path/
+            <label for="email">邮箱</label>
+            <input type="email" id="email" name="email" required>
 
-# Defaults
-defaults:
-  # _posts
-  - scope:
-      path: ""
-      type: posts
-    values:
-      layout: single
-      author_profile: true
-      read_time: true
-      comments: true
-      share: true
-      related: true
-  # _pages
-  - scope:
-      path: ""
-      type: pages
-    values:
-      layout: single
-      author_profile: true
-  # _teaching
-  - scope:
-      path: ""
-      type: teaching
-    values:
-      layout: single
-      author_profile: true
-      share: true
-      comments: true
-  # _publications
-  - scope:
-      path: ""
-      type: publications
-    values:
-      layout: single
-      author_profile: true
-      share: true
-      comments: true
-  # _portfolio
-  - scope:
-      path: ""
-      type: portfolio
-    values:
-      layout: single
-      author_profile: true
-      share: true
-      comment: true
-  # _talks
-  - scope:
-      path: ""
-      type: talks
-    values:
-      layout: talk
-      author_profile: true
-      share: true
+            <label for="message">消息</label>
+            <textarea id="message" name="message" required></textarea>
 
-# Sass/SCSS
-sass:
-  sass_dir: _sass
-  style: compressed # 输出样式压缩
+            <button type="submit" class="cta-btn">发送消息</button>
+        </form>
+    </section>
 
-# Outputting
-permalink: /:categories/:title/ # 默认网址结构
-paginate: 5 # 每页显示5篇文章
-paginate_path: "/page:num/" # 分页路径
-timezone: Etc/UTC # 时区设置
+    <!-- 网站底部 -->
+    <footer>
+        <p>&copy; 2025 一十二叶. All rights reserved.</p>
+    </footer>
 
-# Plugins
-plugins:
-  - jekyll-feed
-  - jekyll-gist
-  - jekyll-paginate
-  - jekyll-sitemap
-  - jekyll-redirect-from
-  - jemoji
+    <!-- 引入JavaScript -->
+    <script src="scripts.js"></script>
+</body>
 
-# Mimic GitHub Pages with --safe
-whitelist:
-  - jekyll-feed
-  - jekyll-gist
-  - jekyll-paginate
-  - jekyll-sitemap
-  - jekyll-redirect-from
-  - jemoji
-
-# Archives
-category_archive:
-  type: liquid
-  path: /categories/
-tag_archive:
-  type: liquid
-  path: /tags/
-
-# HTML Compression
-compress_html:
-  clippings: all
-  ignore:
-    envs: development # 开发环境时不压缩HTML
+</html>
